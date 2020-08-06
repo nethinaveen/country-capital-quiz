@@ -1,5 +1,7 @@
 import { createStore } from "redux";
-import { countryList, asiaCapitalsList } from "../countries";
+import {
+  countryList
+} from "../countries";
 
 export function nextAction(payload) {
   return {
@@ -48,7 +50,6 @@ function handleDisplaySummary(state) {
 
 const initialState = {
   countryList,
-  asiaCapitalsList,
   answeredList: [],
   correctAnswerCounter: 0,
   testCompleted: false,

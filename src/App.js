@@ -2,16 +2,60 @@ import React from "react";
 import { useSelector } from "react-redux";
 import QuestionAndOptions from "./QuestionAndOptions";
 import DisplaySummary from "./DisplaySummary";
+import {
+  asiaCapitalsList,
+  europeCapitalsList,
+  australiaCapitalsList,
+  northAmericaCapitalsList,
+  southAmericaCapitalsList,
+  africaCapitalsList,
+} from "./countries";
+
+function getCapitalOptions(countryObj) {
+  let capitalList = [];
+  let optionsList = [];
+  switch (countryObj.continent) {
+    case "Asia":
+      capitalList = [...asiaCapitalsList];
+      break;
+    case "Europe":
+      capitalList = [...europeCapitalsList];
+      break;
+    case "Australia":
+      capitalList = [...australiaCapitalsList];
+      break;
+    case "North America":
+      capitalList = [...northAmericaCapitalsList];
+      break;
+    case "South America":
+      capitalList = [...southAmericaCapitalsList];
+      break;
+    case "Africa":
+      capitalList = [...africaCapitalsList];
+      break;
+    default:
+      return optionsList;
+  }
+  const filteredCapitalList = capitalList.filter(
+    (captl) => captl !== countryObj.capital
+  );
+  optionsList = filteredCapitalList
+    .sort(() => Math.random() - Math.random())
+    .slice(0, 3);
+  optionsList.push(countryObj.capital);
+  optionsList = optionsList.sort(() => Math.random() - Math.random());
+  console.log(`Options list ${optionsList}`);
+  return optionsList;
+}
 
 function App() {
-  const state = useSelector((state) => state);
   const {
     countryList,
-    asiaCapitalsList,
     answeredList,
     correctAnswerCounter,
     testCompleted,
-  } = state;
+  } = useSelector((state) => state);
+
   console.log(`test completed flag ${testCompleted}`);
   if (testCompleted) {
     return (
@@ -22,23 +66,12 @@ function App() {
       </div>
     );
   } else {
-    console.log(`country List ${countryList}`);
     const countryListLength = countryList.length;
     const randomIndex = Math.floor(Math.random() * countryListLength);
     console.log(`country randomIndex ${randomIndex}`);
     const countryObj = countryList[randomIndex];
-    console.log(`country object ${countryObj}`);
-    console.log(`Asia Capitals list ${asiaCapitalsList}`);
-    const capitalCity = countryObj.capital;
-    const filteredAsiaCapitalsList = asiaCapitalsList.filter(
-      (captl) => captl !== capitalCity
-    );
-    let optionsList = filteredAsiaCapitalsList
-      .sort(() => Math.random() - Math.random())
-      .slice(0, 3);
-    optionsList.push(capitalCity);
-    optionsList = optionsList.sort(() => Math.random() - Math.random());
-    console.log(`Options list ${optionsList}`);
+
+    let optionsList = getCapitalOptions({ ...countryObj });
     const answeredListLength = answeredList.length;
 
     return (
