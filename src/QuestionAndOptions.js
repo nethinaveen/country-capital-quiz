@@ -25,7 +25,7 @@ function QuestionAndOptions(props) {
     setSelectedAnswer(null);
     dispatch(nextAction({ id, correct }));
     setCorrect(null);
-    if (answeredListLength === 1) {
+    if (answeredListLength === 49) {
       dispatch(displaySummaryAction());
     }
   }
@@ -47,7 +47,7 @@ function QuestionAndOptions(props) {
 
   return (
     <div>
-      <h3>Question: What is the capital city of {country} ?</h3>
+      <h3>Question: What is the capital city of "{country}" ?</h3>
       <table width="50%">
         <tbody>
           <tr>

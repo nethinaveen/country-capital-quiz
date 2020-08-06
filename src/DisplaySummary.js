@@ -11,9 +11,9 @@ export default function DisplaySummary(props) {
     }
     return (
         <div>
-          <h3>Question: What is the capital city of {country} ?</h3>
+          <h3>Question: What is the capital city of "{country}" ?</h3>
           {result}
-          <h5>Correct Answer: {capital}</h5>          
+          <h5>Correct Answer: "{capital}"</h5>          
         </div>
       );
 }
