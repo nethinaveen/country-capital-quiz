@@ -386,7 +386,7 @@ export const countryList = [
   },
   {
     id: 65,
-    country: "Kazakhstan",
+    country: "Kosovo",
     capital: "Pristina",
     continent: "Europe",
   },
