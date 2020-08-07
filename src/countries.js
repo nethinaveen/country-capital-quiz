@@ -452,7 +452,7 @@ export const countryList = [
   },
   {
     id: 76,
-    country: "Pland",
+    country: "Poland",
     capital: "Warsaw",
     continent: "Europe",
   },
@@ -867,7 +867,7 @@ export const countryList = [
   {
     id: 145,
     country: "Chad",
-    capital: "N'Djamena",
+    capital: "N'Pjamena",
     continent: "Africa",
   },
   {
