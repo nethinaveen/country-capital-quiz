@@ -591,7 +591,7 @@ export const countryList = [
   {
     id: 99,
     country: "United States of America",
-    capital: "",
+    capital: "Washigton D.C.",
     continent: "North America",
   },
   {
