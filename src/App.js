@@ -11,7 +11,7 @@ import {
   africaCapitalsList,
 } from "./countries";
 
-function getCapitalOptions(countryObj) {
+const getCapitalOptions = (countryObj) => {
   let capitalList = [];
   let optionsList = [];
   switch (countryObj.continent) {
@@ -46,9 +46,9 @@ function getCapitalOptions(countryObj) {
   optionsList = optionsList.sort(() => Math.random() - Math.random());
   console.log(`Options list ${optionsList}`);
   return optionsList;
-}
+};
 
-function App() {
+const App = () => {
   const {
     countryList,
     answeredList,
@@ -87,6 +87,6 @@ function App() {
       </div>
     );
   }
-}
+};
 
 export default App;

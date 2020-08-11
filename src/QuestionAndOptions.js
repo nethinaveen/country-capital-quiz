@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { nextAction, displaySummaryAction } from "./redux";
 
-function QuestionAndOptions(props) {
+const QuestionAndOptions = (props) => {
   const { countryObj, answeredListLength } = props;
   const { id, country, capital } = countryObj;
   const [option1, option2, option3, option4] = props.options;
@@ -10,7 +10,7 @@ function QuestionAndOptions(props) {
   const [correct, setCorrect] = useState(null);
   const dispatch = useDispatch();
 
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log(`handle submit ${e}, ${selectedAnswer}`);
     if (capital === selectedAnswer) {
@@ -18,9 +18,9 @@ function QuestionAndOptions(props) {
     } else {
       setCorrect("No");
     }
-  }
+  };
 
-  function handleNext(e) {
+  const handleNext = (e) => {
     e.preventDefault();
     setSelectedAnswer(null);
     dispatch(nextAction({ id, correct }));
@@ -28,7 +28,7 @@ function QuestionAndOptions(props) {
     if (answeredListLength === 49) {
       dispatch(displaySummaryAction());
     }
-  }
+  };
 
   let result = "";
   if (correct && correct !== "" && correct === "Yes") {
@@ -122,6 +122,6 @@ function QuestionAndOptions(props) {
       </table>
     </div>
   );
-}
+};
 
 export default QuestionAndOptions;

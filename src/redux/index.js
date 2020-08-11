@@ -1,22 +1,20 @@
 import { createStore } from "redux";
-import {
-  countryList
-} from "../countries";
+import { countryList } from "../countries";
 
-export function nextAction(payload) {
+export const nextAction = (payload) => {
   return {
     type: "NEXT",
     payload,
   };
-}
+};
 
-export function displaySummaryAction() {
+export const displaySummaryAction = () => {
   return {
     type: "DISPLAY_SUMMARY",
   };
-}
+};
 
-function handleNext(state, payload) {
+const handleNext = (state, payload) => {
   const { id, correct } = payload;
   console.log(`id in handle submit answer.. ${id}, ${correct}`);
   const { countryList, answeredList, correctAnswerCounter } = state;
@@ -38,7 +36,7 @@ function handleNext(state, payload) {
     countryList: updatedCountryList,
     correctAnswerCounter: correctAnswerCounter + count,
   };
-}
+};
 
 function handleDisplaySummary(state) {
   console.log("handleDislpaySummary");
@@ -55,7 +53,7 @@ const initialState = {
   testCompleted: false,
 };
 
-function reducer(state = initialState, action) {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "NEXT":
       return handleNext(state, action.payload);
@@ -65,7 +63,7 @@ function reducer(state = initialState, action) {
     default:
       return state;
   }
-}
+};
 
 const store = createStore(reducer);
 export default store;
