@@ -31,7 +31,7 @@ const QuestionAndOptions = (props) => {
     setSelectedAnswer(null);
     dispatch(nextAction({ id, correct }));
     setCorrect(null);
-    if (answeredListLength === 49) {
+    if (answeredListLength === 74) {
       dispatch(displaySummaryAction());
     }
   };
@@ -49,7 +49,8 @@ const QuestionAndOptions = (props) => {
   let submitButton,
     nextButton = "";
   if (correct && correct !== "") {
-    submitButton = <button onClick={handleNext}>Next Question</button>;
+    const buttonDisplay = answeredListLength === 49 ? "Next Question" : "Display Summary"
+    submitButton = <button onClick={handleNext}>{buttonDisplay}</button>;
   } else {
     nextButton = <button onClick={handleSubmit}>Submit your answer</button>;
   }
