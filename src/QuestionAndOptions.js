@@ -49,7 +49,7 @@ const QuestionAndOptions = (props) => {
   let submitButton,
     nextButton = "";
   if (correct && correct !== "") {
-    const buttonDisplay = answeredListLength === 49 ? "Next Question" : "Display Summary"
+    const buttonDisplay = (answeredListLength === 74) ? "Display Summary" : "Next Question"
     submitButton = <button onClick={handleNext}>{buttonDisplay}</button>;
   } else {
     nextButton = <button onClick={handleSubmit}>Submit your answer</button>;
