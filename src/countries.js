@@ -825,7 +825,7 @@ export const countryList = [
   {
     id: 138,
     country: "Benin",
-    capital: "Poro Novo",
+    capital: "Porto-Novo",
     continent: "Africa",
   },
   {
