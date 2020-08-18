@@ -513,7 +513,7 @@ export const countryList = [
   {
     id: 86,
     country: "Switzerland",
-    capital: "Berlin",
+    capital: "Bern",
     continent: "Europe",
   },
   {
