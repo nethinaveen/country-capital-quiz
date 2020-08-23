@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/country-capital-quiz/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/country-capital-quiz/static/js/main.446892e1.chunk.js",
-    "main.js.map": "/country-capital-quiz/static/js/main.446892e1.chunk.js.map",
+    "main.css": "/country-capital-quiz/static/css/main.69eda509.chunk.css",
+    "main.js": "/country-capital-quiz/static/js/main.8e0e2183.chunk.js",
+    "main.js.map": "/country-capital-quiz/static/js/main.8e0e2183.chunk.js.map",
     "runtime-main.js": "/country-capital-quiz/static/js/runtime-main.b562cfb9.js",
     "runtime-main.js.map": "/country-capital-quiz/static/js/runtime-main.b562cfb9.js.map",
-    "static/js/2.aad73681.chunk.js": "/country-capital-quiz/static/js/2.aad73681.chunk.js",
-    "static/js/2.aad73681.chunk.js.map": "/country-capital-quiz/static/js/2.aad73681.chunk.js.map",
+    "static/css/2.11829350.chunk.css": "/country-capital-quiz/static/css/2.11829350.chunk.css",
+    "static/js/2.b8b22d14.chunk.js": "/country-capital-quiz/static/js/2.b8b22d14.chunk.js",
+    "static/js/2.b8b22d14.chunk.js.map": "/country-capital-quiz/static/js/2.b8b22d14.chunk.js.map",
     "index.html": "/country-capital-quiz/index.html",
-    "precache-manifest.354a79038d6d18167bdafd7ec1036874.js": "/country-capital-quiz/precache-manifest.354a79038d6d18167bdafd7ec1036874.js",
+    "precache-manifest.351539f9553fd53d703de4959f3a8285.js": "/country-capital-quiz/precache-manifest.351539f9553fd53d703de4959f3a8285.js",
     "service-worker.js": "/country-capital-quiz/service-worker.js",
-    "static/css/main.5ecd60fb.chunk.css.map": "/country-capital-quiz/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.aad73681.chunk.js.LICENSE.txt": "/country-capital-quiz/static/js/2.aad73681.chunk.js.LICENSE.txt"
+    "static/css/2.11829350.chunk.css.map": "/country-capital-quiz/static/css/2.11829350.chunk.css.map",
+    "static/css/main.69eda509.chunk.css.map": "/country-capital-quiz/static/css/main.69eda509.chunk.css.map",
+    "static/js/2.b8b22d14.chunk.js.LICENSE.txt": "/country-capital-quiz/static/js/2.b8b22d14.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b562cfb9.js",
-    "static/js/2.aad73681.chunk.js",
-    "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.446892e1.chunk.js"
+    "static/css/2.11829350.chunk.css",
+    "static/js/2.b8b22d14.chunk.js",
+    "static/css/main.69eda509.chunk.css",
+    "static/js/main.8e0e2183.chunk.js"
   ]
 }
