@@ -1,6 +1,7 @@
 import React from "react";
 
 const DisplaySummary = (props) => {
+  const index = props.index;
   const { country, capital, correct } = props.answeredObj;
   console.log(`DisplaySummary ${country} ${capital} ${correct}`);
   let result;
@@ -19,7 +20,9 @@ const DisplaySummary = (props) => {
   }
   return (
     <div>
-      <h3>Question: What is the capital city of "{country}" ?</h3>
+      <h3>
+        Question {index + 1}: What is the capital city of "{country}" ?
+      </h3>
       {result}
       <h5>Correct Answer: "{capital}"</h5>
     </div>

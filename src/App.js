@@ -1,4 +1,6 @@
 import React from "react";
+import Container from "react-bootstrap/Container";
+import Jumbotron from "react-bootstrap/Jumbotron";
 import { useSelector } from "react-redux";
 import QuestionAndOptions from "./QuestionAndOptions";
 import DisplaySummary from "./DisplaySummary";
@@ -10,6 +12,8 @@ import {
   southAmericaCapitalsList,
   africaCapitalsList,
 } from "./countries";
+// Importing the Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const getCapitalOptions = (countryObj) => {
   let capitalList = [];
@@ -60,8 +64,12 @@ const App = () => {
   if (testCompleted) {
     return (
       <div>
-        {answeredList.map((answeredObj) => (
-          <DisplaySummary key={answeredObj.id} answeredObj={answeredObj} />
+        {answeredList.map((answeredObj, index) => (
+          <DisplaySummary
+            key={answeredObj.id}
+            answeredObj={answeredObj}
+            index={index}
+          />
         ))}
       </div>
     );
@@ -75,16 +83,19 @@ const App = () => {
     const answeredListLength = answeredList.length;
 
     return (
-      <div>
-        <h3>
-          {correctAnswerCounter}/{answeredListLength}
-        </h3>
-        <QuestionAndOptions
-          options={optionsList}
-          countryObj={countryObj}
-          answeredListLength={answeredListLength}
-        />
-      </div>
+      <Container className="p-3">
+        <Jumbotron className="pb-1">
+          <h3 className="text-right">
+            Result - {correctAnswerCounter}/{answeredListLength}
+          </h3>
+          <br />
+          <QuestionAndOptions
+            options={optionsList}
+            countryObj={countryObj}
+            answeredListLength={answeredListLength}
+          />
+        </Jumbotron>
+      </Container>
     );
   }
 };

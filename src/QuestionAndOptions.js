@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { nextAction, displaySummaryAction } from "./redux";
+import Button from "react-bootstrap/Button";
 
 const QuestionAndOptions = (props) => {
   const { countryObj, answeredListLength } = props;
@@ -49,16 +50,20 @@ const QuestionAndOptions = (props) => {
   let submitButton,
     nextButton = "";
   if (correct && correct !== "") {
-    const buttonDisplay = (answeredListLength === 74) ? "Display Summary" : "Next Question"
-    submitButton = <button onClick={handleNext}>{buttonDisplay}</button>;
+    const buttonDisplay =
+      answeredListLength === 74 ? "Display Summary" : "Next Question";
+    submitButton = <Button variant="primary" onClick={handleNext}>{buttonDisplay}</Button>;
   } else {
-    nextButton = <button onClick={handleSubmit}>Submit your answer</button>;
+    nextButton = <Button variant="primary" onClick={handleSubmit}>Submit your answer</Button>;
   }
 
   return (
     <div>
       <form>
-        <h3>Question: What is the capital city of "{country}" ?</h3>
+        <h3>
+          Question {answeredListLength + 1}: What is the capital city of "
+          {country}" ?
+        </h3>
         <table width="50%">
           <tbody>
             <tr>
