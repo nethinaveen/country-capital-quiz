@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { nextAction, displaySummaryAction } from "./redux";
 import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
 
 const QuestionAndOptions = (props) => {
   const { countryObj, answeredListLength } = props;
@@ -37,14 +38,22 @@ const QuestionAndOptions = (props) => {
     }
   };
 
+  const getAlertStyle = (optionVal) => {
+    if (selectedAnswer == optionVal) {
+      if (correct && correct !== "" && correct === "Yes") {
+        return "success";
+      } else if (correct && correct !== "" && correct === "No") {
+        return "danger";
+      }
+    }
+    return "light";
+  };
+
   let result = "";
   if (correct && correct !== "" && correct === "Yes") {
     result = <h4 style={{ color: "#0e5848" }}>Correct answer</h4>;
   } else if (correct && correct !== "" && correct === "No") {
     result = <h4 style={{ color: "#9a092c" }}>Wrong answer</h4>;
-  }
-  if (err) {
-    result = <h4 style={{ color: "#9a092c" }}>Please select an answer</h4>;
   }
 
   let submitButton,
@@ -52,13 +61,22 @@ const QuestionAndOptions = (props) => {
   if (correct && correct !== "") {
     const buttonDisplay =
       answeredListLength === 74 ? "Display Summary" : "Next Question";
-    submitButton = <Button variant="primary" onClick={handleNext}>{buttonDisplay}</Button>;
+    submitButton = (
+      <Button variant="primary" onClick={handleNext}>
+        {buttonDisplay}
+      </Button>
+    );
   } else {
-    nextButton = <Button variant="primary" onClick={handleSubmit}>Submit your answer</Button>;
+    nextButton = (
+      <Button variant="primary" onClick={handleSubmit}>
+        Submit your answer
+      </Button>
+    );
   }
 
   return (
     <div>
+      <Alert variant="danger" show={err}> Please select an answer</Alert>
       <form>
         <h3>
           Question {answeredListLength + 1}: What is the capital city of "
@@ -68,59 +86,67 @@ const QuestionAndOptions = (props) => {
           <tbody>
             <tr>
               <td>
-                <label>
-                  A.{" "}
-                  <input
-                    type="radio"
-                    value={option1}
-                    name="answer"
-                    checked={selectedAnswer === option1}
-                    onChange={(e) => setSelectedAnswer(e.target.value)}
-                  />{" "}
-                  {option1}
-                </label>
+                <Alert variant={getAlertStyle(option1)}>
+                  <label>
+                    A.{" "}
+                    <input
+                      type="radio"
+                      value={option1}
+                      name="answer"
+                      checked={selectedAnswer === option1}
+                      onChange={(e) => setSelectedAnswer(e.target.value)}
+                    />{" "}
+                    {option1}
+                  </label>
+                </Alert>
               </td>
               <td>
-                <label>
-                  B.{" "}
-                  <input
-                    type="radio"
-                    value={option2}
-                    name="answer"
-                    checked={selectedAnswer === option2}
-                    onChange={(e) => setSelectedAnswer(e.target.value)}
-                  />{" "}
-                  {option2}
-                </label>
+                <Alert variant={getAlertStyle(option2)}>
+                  <label>
+                    B.{" "}
+                    <input
+                      type="radio"
+                      value={option2}
+                      name="answer"
+                      checked={selectedAnswer === option2}
+                      onChange={(e) => setSelectedAnswer(e.target.value)}
+                    />{" "}
+                    {option2}
+                  </label>
+                </Alert>
               </td>
             </tr>
 
             <tr>
               <td>
-                <label>
-                  C.{" "}
-                  <input
-                    type="radio"
-                    value={option3}
-                    name="answer"
-                    checked={selectedAnswer === option3}
-                    onChange={(e) => setSelectedAnswer(e.target.value)}
-                  />{" "}
-                  {option3}
-                </label>
+                <Alert variant={getAlertStyle(option3)}>
+                  <label>
+                    C.{" "}
+                    <input
+                      type="radio"
+                      value={option3}
+                      name="answer"
+                      checked={selectedAnswer === option3}
+                      onChange={(e) => setSelectedAnswer(e.target.value)}
+                    />{" "}
+                    {option3}
+                  </label>
+                </Alert>
               </td>
               <td>
-                <label>
-                  D.{" "}
-                  <input
-                    type="radio"
-                    value={option4}
-                    name="answer"
-                    checked={selectedAnswer === option4}
-                    onChange={(e) => setSelectedAnswer(e.target.value)}
-                  />{" "}
-                  {option4}
-                </label>
+                <Alert variant={getAlertStyle(option4)}>
+                  <label>
+                    D.{" "}
+                    <input
+                      type="radio"
+                      value={option4}
+                      name="answer"
+                      checked={selectedAnswer === option4}
+                      onChange={(e) => setSelectedAnswer(e.target.value)}
+                    />{" "}
+                    {option4}
+                  </label>
+                </Alert>
               </td>
             </tr>
           </tbody>
