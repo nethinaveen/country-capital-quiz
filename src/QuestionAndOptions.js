@@ -39,7 +39,7 @@ const QuestionAndOptions = (props) => {
   };
 
   const getAlertStyle = (optionVal) => {
-    if (selectedAnswer == optionVal) {
+    if (selectedAnswer === optionVal) {
       if (correct && correct !== "" && correct === "Yes") {
         return "success";
       } else if (correct && correct !== "" && correct === "No") {
@@ -76,7 +76,10 @@ const QuestionAndOptions = (props) => {
 
   return (
     <div>
-      <Alert variant="danger" show={err}> Please select an answer</Alert>
+      <Alert variant="danger" show={err}>
+        {" "}
+        Please select an answer
+      </Alert>
       <form>
         <h3>
           Question {answeredListLength + 1}: What is the capital city of "
