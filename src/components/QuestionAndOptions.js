@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { nextAction, displaySummaryAction } from "./redux";
+import { nextAction, displaySummaryAction } from "../redux";
 import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
 

@@ -1,5 +1,5 @@
 import { createStore } from "redux";
-import { countryList } from "../countries";
+import { countryList } from "../components/countries";
 
 export const nextAction = (payload) => {
   return {

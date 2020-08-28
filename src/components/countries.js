@@ -867,7 +867,7 @@ export const countryList = [
   {
     id: 145,
     country: "Chad",
-    capital: "N'Pjamena",
+    capital: "N'Djamena",
     continent: "Africa",
   },
   {
