@@ -14,6 +14,13 @@ export const displaySummaryAction = () => {
   };
 };
 
+export const numOfQuestionsAction = (payload) => {
+  return {
+    type: "NUMBER_OF_QUESTIONS",
+    payload,
+  };
+};
+
 const handleNext = (state, payload) => {
   const { id, correct } = payload;
   console.log(`id in handle submit answer.. ${id}, ${correct}`);
@@ -51,6 +58,7 @@ const initialState = {
   answeredList: [],
   correctAnswerCounter: 0,
   testCompleted: false,
+  numberOfQuestions: 5,
 };
 
 const reducer = (state = initialState, action) => {
@@ -59,6 +67,8 @@ const reducer = (state = initialState, action) => {
       return handleNext(state, action.payload);
     case "DISPLAY_SUMMARY":
       return handleDisplaySummary(state);
+    case "NUMBER_OF_QUESTIONS":
+      return { ...state, numberOfQuestions: action.payload };
 
     default:
       return state;

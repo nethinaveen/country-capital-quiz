@@ -13,7 +13,7 @@ import {
   africaCapitalsList,
 } from "./countries";
 // Importing the Bootstrap CSS
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const getCapitalOptions = (countryObj) => {
   let capitalList = [];
@@ -58,9 +58,10 @@ const Quiz = () => {
     answeredList,
     correctAnswerCounter,
     testCompleted,
+    numberOfQuestions,
   } = useSelector((state) => state);
 
-  console.log(`test completed flag ${testCompleted}`);
+  console.log(`numOfQuestions in Quiz ${numberOfQuestions}`);
   if (testCompleted) {
     return (
       <div>
@@ -92,6 +93,7 @@ const Quiz = () => {
           <QuestionAndOptions
             options={optionsList}
             countryObj={countryObj}
+            numberOfQuestions={numberOfQuestions}
             answeredListLength={answeredListLength}
           />
         </Jumbotron>

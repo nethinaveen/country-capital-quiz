@@ -15,7 +15,7 @@ const CountriesByContinent = (props) => {
       </thead>
       <tbody>
         {continentCountryList.map((country, index) => (
-          <DisplayCountryCapital index={index + 1} country={country} />
+          <DisplayCountryCapital key={country.id} index={index + 1} country={country} />
         ))}
       </tbody>
     </Table>

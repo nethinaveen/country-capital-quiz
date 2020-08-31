@@ -5,13 +5,16 @@ import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
 
 const QuestionAndOptions = (props) => {
-  const { countryObj, answeredListLength } = props;
+  const { countryObj, answeredListLength, numberOfQuestions } = props;
   const { id, country, capital } = countryObj;
   const [option1, option2, option3, option4] = props.options;
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [correct, setCorrect] = useState(null);
   const [err, setErr] = useState(false);
   const dispatch = useDispatch();
+  let numOfQues = numberOfQuestions
+    ? Number.parseInt(numberOfQuestions) - 1
+    : 4;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,7 +36,7 @@ const QuestionAndOptions = (props) => {
     setSelectedAnswer(null);
     dispatch(nextAction({ id, correct }));
     setCorrect(null);
-    if (answeredListLength === 74) {
+    if (answeredListLength === numOfQues) {
       dispatch(displaySummaryAction());
     }
   };
@@ -60,7 +63,7 @@ const QuestionAndOptions = (props) => {
     nextButton = "";
   if (correct && correct !== "") {
     const buttonDisplay =
-      answeredListLength === 74 ? "Display Summary" : "Next Question";
+      answeredListLength === numOfQues ? "Display Summary" : "Next Question";
     submitButton = (
       <Button variant="primary" onClick={handleNext}>
         {buttonDisplay}
