@@ -18,7 +18,7 @@ const WelcomeToQuiz = () => {
       setErr(true);
     } else {
       dispatch(numOfQuestionsAction(selectedAnswer));
-      history.push("/quiz")
+      history.push({pathname: "/quiz"})
     }
   };
 
