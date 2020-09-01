@@ -41,10 +41,10 @@ const App = () => {
       <Jumbotron className="pb-1">
         <Switch>
           <Route exact path="/country-capital-quiz" component={Home} />
-          <Route path="/revision" component={Revision} />
-          <Route path="/quiz" component={Quiz} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/welcometoquiz" component={WelcomeToQuiz} />
+          <Route exact path="/revision" component={Revision} />
+          <Route exact path="/quiz" component={Quiz} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/welcometoquiz" component={WelcomeToQuiz} />
           <Route component={NoPageFound} />
         </Switch>
       </Jumbotron>
