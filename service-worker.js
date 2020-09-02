@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/country-capital-quiz/precache-manifest.d9982f219a013303cdf2a5afe609ad92.js"
+  "/country-capital-quiz/precache-manifest.58f53fe3a8479c4776054baf32e26203.js"
 );
 
 self.addEventListener('message', (event) => {
