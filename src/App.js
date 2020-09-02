@@ -31,7 +31,7 @@ const App = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto" activeKey={window.location.pathname}>
             <Nav.Link href="/revision">Revision</Nav.Link>
-            <Nav.Link href="/welcometoquiz">Take Quiz</Nav.Link>
+            <Nav.Link href="/quiz">Take Quiz</Nav.Link>
           </Nav>
           <Nav activeKey={window.location.pathname}>
             <Nav.Link href="/contact">Contact us</Nav.Link>
