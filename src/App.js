@@ -16,7 +16,7 @@ import WelcomeToQuiz from "./components/WelcomeToQuiz";
 
 const App = () => {
   return (
-    <Router basename={process.env.PUBLIC_URL} >
+    <Router>
       <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
         <Navbar.Brand href="/country-capital-quiz">
           <Image
