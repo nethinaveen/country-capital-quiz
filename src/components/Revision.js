@@ -4,8 +4,6 @@ import Card from "react-bootstrap/Card";
 import { countryList } from "../components/countries";
 import _ from "lodash";
 import CountriesByContinent from "./CountriesByContinent";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const Revision = () => {
   const [toggleChevron, setToggleChevron] = useState([
@@ -39,9 +37,9 @@ const Revision = () => {
           Asia
           <div className="float-right">
             {toggleChevron[0] ? (
-              <FontAwesomeIcon icon={faChevronDown} />
+              "Down"
             ) : (
-              <FontAwesomeIcon icon={faChevronUp} />
+              "Up"
             )}
           </div>
         </Accordion.Toggle>
@@ -62,9 +60,9 @@ const Revision = () => {
           Europe
           <div className="float-right">
             {toggleChevron[1] ? (
-              <FontAwesomeIcon icon={faChevronDown} />
+              "Down"
             ) : (
-              <FontAwesomeIcon icon={faChevronUp} />
+              "Up"
             )}
           </div>
         </Accordion.Toggle>
@@ -87,9 +85,9 @@ const Revision = () => {
           Australia
           <div className="float-right">
             {toggleChevron[2] ? (
-              <FontAwesomeIcon icon={faChevronDown} />
+              "Down"
             ) : (
-              <FontAwesomeIcon icon={faChevronUp} />
+              "Up"
             )}
           </div>
         </Accordion.Toggle>
@@ -112,9 +110,9 @@ const Revision = () => {
           Africa
           <div className="float-right">
             {toggleChevron[3] ? (
-              <FontAwesomeIcon icon={faChevronDown} />
+              "Down"
             ) : (
-              <FontAwesomeIcon icon={faChevronUp} />
+              "Up"
             )}
           </div>
         </Accordion.Toggle>
@@ -137,9 +135,9 @@ const Revision = () => {
           North America
           <div className="float-right">
             {toggleChevron[4] ? (
-              <FontAwesomeIcon icon={faChevronDown} />
+              "Down"
             ) : (
-              <FontAwesomeIcon icon={faChevronUp} />
+              "Up"
             )}
           </div>
         </Accordion.Toggle>
@@ -162,9 +160,9 @@ const Revision = () => {
           South America
           <div className="float-right">
             {toggleChevron[5] ? (
-              <FontAwesomeIcon icon={faChevronDown} />
+              "Down"
             ) : (
-              <FontAwesomeIcon icon={faChevronUp} />
+              "Up"
             )}
           </div>
         </Accordion.Toggle>
