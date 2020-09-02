@@ -1,5 +1,10 @@
 import React from "react";
-import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import {
+  Switch,
+  Route,
+  BrowserRouter as Router,
+  NavLink,
+} from "react-router-dom";
 import NoPageFound from "./components/NoPageFound";
 import Home from "./components/Home";
 import Jumbotron from "react-bootstrap/Jumbotron";
@@ -16,9 +21,9 @@ import WelcomeToQuiz from "./components/WelcomeToQuiz";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/country-capital-quiz">
       <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
-        <Navbar.Brand href="/country-capital-quiz">
+        <NavLink to="/" className="navbar-brand">
           <Image
             src={logoImage}
             style={{ width: "60px" }}
@@ -26,21 +31,28 @@ const App = () => {
             roundedCircle
           />
           {"      "} Country capitals App
-        </Navbar.Brand>
+        </NavLink>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto" activeKey={window.location.pathname}>
-            <Nav.Link href="/revision">Revision</Nav.Link>
-            <Nav.Link href="/welcometoquiz">Take Quiz</Nav.Link>
+            <NavLink to="/revision" className="nav-link">
+              Revision
+            </NavLink>
+
+            <NavLink to="/welcometoquiz" className="nav-link">
+              Take Quiz
+            </NavLink>
           </Nav>
           <Nav activeKey={window.location.pathname}>
-            <Nav.Link href="/contact">Contact us</Nav.Link>
+            <NavLink to="/contact" className="nav-link">
+              Contact us
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
       <Jumbotron className="pb-1">
         <Switch>
-          <Route exact path="/country-capital-quiz" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route exact path="/revision" component={Revision} />
           <Route exact path="/quiz" component={Quiz} />
           <Route exact path="/contact" component={Contact} />
