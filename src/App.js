@@ -12,7 +12,6 @@ import Revision from "./components/Revision";
 import Contact from "./components/Contact";
 import Quiz from "./components/Quiz";
 import logoImage from "./asset/logo1.png";
-import WelcomeToQuiz from "./components/WelcomeToQuiz";
 
 const App = () => {
   return (
@@ -44,7 +43,6 @@ const App = () => {
           <Route exact path="/revision" component={Revision} />
           <Route exact path="/quiz" component={Quiz} />
           <Route exact path="/contact" component={Contact} />
-          <Route exact path="/welcometoquiz" component={WelcomeToQuiz} />
           <Route component={NoPageFound} />
         </Switch>
       </Jumbotron>

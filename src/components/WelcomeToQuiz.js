@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { Button, Alert } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { numOfQuestionsAction } from "../redux";
-import { useHistory } from "react-router-dom";
+//import { useHistory } from "react-router-dom";
 
 const WelcomeToQuiz = () => {
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [err, setErr] = useState(false);
   const dispatch = useDispatch();
-  let history = useHistory();
+  //let history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
