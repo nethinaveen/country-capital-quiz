@@ -16,9 +16,9 @@ import WelcomeToQuiz from "./components/WelcomeToQuiz";
 
 const App = () => {
   return (
-    <Router basename="/">
+    <Router basename={process.env.PUBLIC_URL} >
       <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
-        <Navbar.Brand href="/country-capital-quiz">
+        <Navbar.Brand href="/">
           <Image
             src={logoImage}
             style={{ width: "60px" }}
@@ -40,7 +40,7 @@ const App = () => {
       </Navbar>
       <Jumbotron className="pb-1">
         <Switch>
-          <Route exact path="/country-capital-quiz" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route exact path="/revision" component={Revision} />
           <Route exact path="/quiz" component={Quiz} />
           <Route exact path="/contact" component={Contact} />
