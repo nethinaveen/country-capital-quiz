@@ -12,10 +12,11 @@ import Revision from "./components/Revision";
 import Contact from "./components/Contact";
 import Quiz from "./components/Quiz";
 import logoImage from "./asset/logo1.png";
+import WelcomeToQuiz from "./components/WelcomeToQuiz";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL} >
       <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
         <Navbar.Brand href="/country-capital-quiz">
           <Image
@@ -30,7 +31,7 @@ const App = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto" activeKey={window.location.pathname}>
             <Nav.Link href="/revision">Revision</Nav.Link>
-            <Nav.Link href="/quiz">Take Quiz</Nav.Link>
+            <Nav.Link href="/welcometoquiz">Take Quiz</Nav.Link>
           </Nav>
           <Nav activeKey={window.location.pathname}>
             <Nav.Link href="/contact">Contact us</Nav.Link>
@@ -43,6 +44,7 @@ const App = () => {
           <Route exact path="/revision" component={Revision} />
           <Route exact path="/quiz" component={Quiz} />
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/welcometoquiz" component={WelcomeToQuiz} />
           <Route component={NoPageFound} />
         </Switch>
       </Jumbotron>
