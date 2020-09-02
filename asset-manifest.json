@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/country-capital-quiz/static/css/main.69eda509.chunk.css",
-    "main.js": "/country-capital-quiz/static/js/main.fde05ebc.chunk.js",
-    "main.js.map": "/country-capital-quiz/static/js/main.fde05ebc.chunk.js.map",
+    "main.js": "/country-capital-quiz/static/js/main.dc124e91.chunk.js",
+    "main.js.map": "/country-capital-quiz/static/js/main.dc124e91.chunk.js.map",
     "runtime-main.js": "/country-capital-quiz/static/js/runtime-main.b562cfb9.js",
     "runtime-main.js.map": "/country-capital-quiz/static/js/runtime-main.b562cfb9.js.map",
     "static/css/2.11829350.chunk.css": "/country-capital-quiz/static/css/2.11829350.chunk.css",
     "static/js/2.0d6a97cc.chunk.js": "/country-capital-quiz/static/js/2.0d6a97cc.chunk.js",
     "static/js/2.0d6a97cc.chunk.js.map": "/country-capital-quiz/static/js/2.0d6a97cc.chunk.js.map",
     "index.html": "/country-capital-quiz/index.html",
-    "precache-manifest.c428f851b144348f16abffad5a952e50.js": "/country-capital-quiz/precache-manifest.c428f851b144348f16abffad5a952e50.js",
+    "precache-manifest.9601bd313a6b0d993cf434e464d70ad5.js": "/country-capital-quiz/precache-manifest.9601bd313a6b0d993cf434e464d70ad5.js",
     "service-worker.js": "/country-capital-quiz/service-worker.js",
     "static/css/2.11829350.chunk.css.map": "/country-capital-quiz/static/css/2.11829350.chunk.css.map",
     "static/css/main.69eda509.chunk.css.map": "/country-capital-quiz/static/css/main.69eda509.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.11829350.chunk.css",
     "static/js/2.0d6a97cc.chunk.js",
     "static/css/main.69eda509.chunk.css",
-    "static/js/main.fde05ebc.chunk.js"
+    "static/js/main.dc124e91.chunk.js"
   ]
 }
