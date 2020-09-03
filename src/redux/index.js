@@ -68,7 +68,7 @@ const reducer = (state = initialState, action) => {
     case "DISPLAY_SUMMARY":
       return handleDisplaySummary(state);
     case "NUMBER_OF_QUESTIONS":
-      return { ...state, numberOfQuestions: action.payload };
+      return { ...initialState, numberOfQuestions: action.payload };
 
     default:
       return state;
