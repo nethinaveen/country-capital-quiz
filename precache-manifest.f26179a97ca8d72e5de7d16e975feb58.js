@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bfe15d1c1932dd3504e745036d1c8dd9",
+    "revision": "51d8da7acc5b7aa45b77aeb8e4108439",
     "url": "/country-capital-quiz/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/country-capital-quiz/static/css/2.11829350.chunk.css"
   },
   {
-    "revision": "3b7fe1c91eb34c8c157d",
+    "revision": "a15cb88423b75ab933a6",
     "url": "/country-capital-quiz/static/css/main.69eda509.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/country-capital-quiz/static/js/2.d743e098.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3b7fe1c91eb34c8c157d",
-    "url": "/country-capital-quiz/static/js/main.24b66f2e.chunk.js"
+    "revision": "a15cb88423b75ab933a6",
+    "url": "/country-capital-quiz/static/js/main.a4b4fc5b.chunk.js"
   },
   {
     "revision": "ce2c783933ce8209b93e",
