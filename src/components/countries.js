@@ -61,7 +61,7 @@ export const countryList = [
   },
   {
     id: 11,
-    country: "Bharain",
+    country: "Bahrain",
     capital: "Manama",
     continent: "Asia",
   },

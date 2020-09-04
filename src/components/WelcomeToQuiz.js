@@ -112,7 +112,7 @@ const WelcomeToQuiz = () => {
             <td>
               {" "}
               <Button variant="primary" onClick={handleSubmit}>
-                Submit
+                Start the quiz !!
               </Button>
             </td>
           </tr>
