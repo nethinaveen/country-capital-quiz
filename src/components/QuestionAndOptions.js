@@ -15,6 +15,7 @@ const QuestionAndOptions = (props) => {
   let numOfQues = numberOfQuestions
     ? Number.parseInt(numberOfQuestions) - 1
     : 4;
+  const [userAnswer, setUserAnswer] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -28,13 +29,14 @@ const QuestionAndOptions = (props) => {
       } else {
         setCorrect("No");
       }
+      setUserAnswer(selectedAnswer);
     }
   };
 
   const handleNext = (e) => {
     e.preventDefault();
-    setSelectedAnswer(null);
-    dispatch(nextAction({ id, correct }));
+    setSelectedAnswer(null);    
+    dispatch(nextAction({ id, correct, userAnswer }));    
     setCorrect(null);
     if (answeredListLength === numOfQues) {
       dispatch(displaySummaryAction());

@@ -1,31 +1,27 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCheckCircle,
+  faTimesCircle,
+} from "@fortawesome/free-solid-svg-icons";
 
 const DisplaySummary = (props) => {
   const index = props.index;
-  const { country, capital, correct } = props.answeredObj;
-  console.log(`DisplaySummary ${country} ${capital} ${correct}`);
+  const { country, capital, correct, selectedAnswer } = props.answeredObj;
   let result;
   if ("Yes" === correct) {
-    result = (
-      <h4 style={{ color: "#0e5848" }}>
-        Correct answer was selected for this question
-      </h4>
-    );
+    result = <FontAwesomeIcon icon={faCheckCircle} className="text-success" />;
   } else if ("No" === correct) {
-    result = (
-      <h4 style={{ color: "#9a092c" }}>
-        Wrong answer was selected for this question
-      </h4>
-    );
+    result = <FontAwesomeIcon icon={faTimesCircle} className="text-danger" />;
   }
   return (
-    <div>
-      <h3>
-        Question {index + 1}: What is the capital city of "{country}" ?
-      </h3>
-      {result}
-      <h5>Correct Answer: "{capital}"</h5>
-    </div>
+    <tr>
+      <td>{index + 1}</td>
+      <td>What is the capital city of "{country}" ?</td>
+      <td>{selectedAnswer}</td>
+      <td>{capital}</td>
+      <td>{result}</td>
+    </tr>
   );
 };
 

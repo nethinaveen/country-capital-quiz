@@ -22,16 +22,13 @@ export const numOfQuestionsAction = (payload) => {
 };
 
 const handleNext = (state, payload) => {
-  const { id, correct } = payload;
-  console.log(`id in handle submit answer.. ${id}, ${correct}`);
+  const { id, correct, userAnswer } = payload;
   const { countryList, answeredList, correctAnswerCounter } = state;
   const countryObj = countryList.find((countryObj) => countryObj.id === id);
   const updatedCountryList = countryList.filter((cntry) => cntry.id !== id);
-  console.log(`updatedCountryList length: ${updatedCountryList.length}`);
-  let updatedAnsweredList;
   let count = 0;
   countryObj.correct = correct;
-  updatedAnsweredList = [...answeredList, countryObj];
+  countryObj.selectedAnswer = userAnswer;
 
   if (correct === "Yes") {
     count = 1;
@@ -39,14 +36,13 @@ const handleNext = (state, payload) => {
 
   return {
     ...state,
-    answeredList: updatedAnsweredList,
+    answeredList: [...answeredList, countryObj],
     countryList: updatedCountryList,
     correctAnswerCounter: correctAnswerCounter + count,
   };
 };
 
 function handleDisplaySummary(state) {
-  console.log("handleDislpaySummary");
   return {
     ...state,
     testCompleted: true,

@@ -1,6 +1,4 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Jumbotron from "react-bootstrap/Jumbotron";
 import { useSelector } from "react-redux";
 import QuestionAndOptions from "./QuestionAndOptions";
 import DisplaySummary from "./DisplaySummary";
@@ -14,6 +12,7 @@ import {
 } from "./countries";
 // Importing the Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Jumbotron, Table } from "react-bootstrap";
 
 const getCapitalOptions = (countryObj) => {
   let capitalList = [];
@@ -48,7 +47,6 @@ const getCapitalOptions = (countryObj) => {
     .slice(0, 3);
   optionsList.push(countryObj.capital);
   optionsList = optionsList.sort(() => Math.random() - Math.random());
-  console.log(`Options list ${optionsList}`);
   return optionsList;
 };
 
@@ -60,28 +58,42 @@ const Quiz = () => {
     testCompleted,
     numberOfQuestions,
   } = useSelector((state) => state);
+  const answeredListLength = answeredList.length;
 
-  console.log(`numOfQuestions in Quiz ${numberOfQuestions}`);
   if (testCompleted) {
     return (
       <div>
-        {answeredList.map((answeredObj, index) => (
-          <DisplaySummary
-            key={answeredObj.id}
-            answeredObj={answeredObj}
-            index={index}
-          />
-        ))}
+        <h3 className="text-right text-info">
+          Total Result - {correctAnswerCounter}/{answeredListLength}
+        </h3>
+        <Table striped bordered hover variant="light" responsive>
+          <thead>
+            <tr>
+              <th>S.No</th>
+              <th>Question</th>
+              <th>Your Answer</th>
+              <th>Correct Answer</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            {answeredList.map((answeredObj, index) => (
+              <DisplaySummary
+                key={answeredObj.id}
+                answeredObj={answeredObj}
+                index={index}
+              />
+            ))}
+          </tbody>
+        </Table>
       </div>
     );
   } else {
     const countryListLength = countryList.length;
     const randomIndex = Math.floor(Math.random() * countryListLength);
-    console.log(`country randomIndex ${randomIndex}`);
     const countryObj = countryList[randomIndex];
 
     let optionsList = getCapitalOptions({ ...countryObj });
-    const answeredListLength = answeredList.length;
 
     return (
       <Container className="p-3">

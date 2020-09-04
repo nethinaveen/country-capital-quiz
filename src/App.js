@@ -30,7 +30,7 @@ const App = () => {
             fluid
             roundedCircle
           />
-          {"      "} Country capitals App
+          {"      "} Country Capitals App
         </NavLink>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
