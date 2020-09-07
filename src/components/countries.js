@@ -188,7 +188,7 @@ export const countryList = [
   },
   {
     id: 32,
-    country: "Omen",
+    country: "Oman",
     capital: "Muskat",
     continent: "Asia",
   },
@@ -627,7 +627,7 @@ export const countryList = [
   {
     id: 105,
     country: "Trinidad & Tobago",
-    capital: "Part of Spair",
+    capital: "Port of Spair",
     continent: "North America",
   },
   {

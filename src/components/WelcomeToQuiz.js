@@ -48,7 +48,7 @@ const WelcomeToQuiz = () => {
               checked={selectedAnswer === "5"}
               onChange={(e) => setSelectedAnswer(e.target.value)}
             />{" "}
-            5 Questions
+            5 Questions (Trail)
           </label>
         </li>
         <li>
@@ -61,7 +61,7 @@ const WelcomeToQuiz = () => {
               checked={selectedAnswer === "25"}
               onChange={(e) => setSelectedAnswer(e.target.value)}
             />{" "}
-            25 Questions
+            25 Questions (Beginner)
           </label>
         </li>
 
@@ -75,7 +75,7 @@ const WelcomeToQuiz = () => {
               checked={selectedAnswer === "50"}
               onChange={(e) => setSelectedAnswer(e.target.value)}
             />{" "}
-            50 Questions
+            50 Questions (Intermediate)
           </label>
         </li>
         <li>
@@ -88,7 +88,7 @@ const WelcomeToQuiz = () => {
               checked={selectedAnswer === "75"}
               onChange={(e) => setSelectedAnswer(e.target.value)}
             />{" "}
-            75 Questions
+            75 Questions (Moderate)
           </label>
         </li>
         <li>
@@ -101,7 +101,7 @@ const WelcomeToQuiz = () => {
               checked={selectedAnswer === "100"}
               onChange={(e) => setSelectedAnswer(e.target.value)}
             />{" "}
-            100 Questions
+            100 Questions (Expert)
           </label>
         </li>
       </ul>
