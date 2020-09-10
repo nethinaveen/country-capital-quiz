@@ -1,18 +1,16 @@
 import React from "react";
+import { Container, Jumbotron } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import QuestionAndOptions from "./QuestionAndOptions";
-import DisplaySummary from "./DisplaySummary";
 import {
+  africaCapitalsList,
   asiaCapitalsList,
-  europeCapitalsList,
   australiaCapitalsList,
+  europeCapitalsList,
   northAmericaCapitalsList,
   southAmericaCapitalsList,
-  africaCapitalsList,
 } from "./countries";
-// Importing the Bootstrap CSS
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Jumbotron, Table, Alert } from "react-bootstrap";
+import QuestionAndOptions from "./QuestionAndOptions";
+import DisplaySummaryContainer from "./DisplaySummaryContainer";
 
 const getCapitalOptions = (countryObj) => {
   let capitalList = [];
@@ -61,59 +59,12 @@ const Quiz = () => {
   const answeredListLength = answeredList.length;
 
   if (testCompleted) {
-    let expertise = answeredListLength - correctAnswerCounter;
-    let suggestion = 0;
-    if (expertise > 5) {
-      suggestion = (
-        <Alert variant="danger">
-          <h4>
-            You got {expertise} wrongs.., please revise and try again the same
-            level
-          </h4>
-        </Alert>
-      );
-    } else if (expertise > 0) {
-      suggestion = (
-        <Alert variant="warning">
-          <h4>You are good in this level.., little practise is needed :-)</h4>
-        </Alert>
-      );
-    } else {
-      suggestion = (
-        <Alert variant="success">
-          <h4>You are excelled in this level..</h4>
-        </Alert>
-      );
-    }
     return (
-      <div>
-        <h3 className="text-right text-info">
-          Total Result - {correctAnswerCounter}/{answeredListLength}
-        </h3>
-        <br />
-        {suggestion}
-        <br />
-        <Table striped bordered hover variant="light" responsive>
-          <thead>
-            <tr>
-              <th>S.No</th>
-              <th>Question</th>
-              <th>Your Answer</th>
-              <th>Correct Answer</th>
-              <th>Result</th>
-            </tr>
-          </thead>
-          <tbody>
-            {answeredList.map((answeredObj, index) => (
-              <DisplaySummary
-                key={answeredObj.id}
-                answeredObj={answeredObj}
-                index={index}
-              />
-            ))}
-          </tbody>
-        </Table>
-      </div>
+      <DisplaySummaryContainer
+        answeredListLength={answeredListLength}
+        correctAnswerCounter={correctAnswerCounter}
+        answeredList={answeredList}
+      />
     );
   } else {
     const countryListLength = countryList.length;
