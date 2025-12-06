@@ -30,4 +30,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./build
-          keep_files: false
+          cname: nethinaveen.github.io
+          keep_files: true
