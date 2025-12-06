@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Jumbotron } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { countryList } from "./countries";
+import { hasFlagForCountry } from "../asset/flagsLoader";
 import FlagQuestionAndOptions from "./FlagQuestionAndOptions";
 import DisplaySummaryContainer from "./DisplaySummaryContainer";
 
@@ -9,9 +10,9 @@ const getFlagOptions = (countryObj) => {
   let countryNames = [];
   let optionsList = [];
   
-  // Get all country names from the same continent
+  // Get all country names from the same continent that have flag images
   countryNames = countryList
-    .filter(c => c.continent === countryObj.continent)
+    .filter(c => c.continent === countryObj.continent && hasFlagForCountry(c.country))
     .map(c => c.country);
   
   // Filter out the correct country
@@ -48,12 +49,26 @@ const FlagQuiz = () => {
         answeredListLength={answeredListLength}
         correctAnswerCounter={correctAnswerCounter}
         answeredList={answeredList}
+        quizType="flag"
       />
     );
   } else {
-    const countryListLength = countries.length;
+    // Get only countries with flag images
+    const countriesWithFlags = countries.filter(c => hasFlagForCountry(c.country));
+    const countryListLength = countriesWithFlags.length;
+    
+    if (countryListLength === 0) {
+      return (
+        <Container className="p-3">
+          <Jumbotron className="pb-1">
+            <h3>No countries with flag images available</h3>
+          </Jumbotron>
+        </Container>
+      );
+    }
+    
     const randomIndex = Math.floor(Math.random() * countryListLength);
-    const countryObj = countries[randomIndex];
+    const countryObj = countriesWithFlags[randomIndex];
 
     let optionsList = getFlagOptions({ ...countryObj });
 

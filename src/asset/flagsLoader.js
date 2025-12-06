@@ -21,4 +21,9 @@ export function getFlagByCountryName(countryName) {
   return flags[key] || null;
 }
 
+export function hasFlagForCountry(countryName) {
+  const key = normalizeName(countryName);
+  return flags.hasOwnProperty(key);
+}
+
 export default flags;

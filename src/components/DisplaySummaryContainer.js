@@ -3,7 +3,7 @@ import { Alert, Table } from "react-bootstrap";
 import DisplaySummary from "./DisplaySummary";
 
 const DisplaySummaryContainer = (props) => {
-  const { answeredListLength, correctAnswerCounter, answeredList } = props;
+  const { answeredListLength, correctAnswerCounter, answeredList, quizType } = props;
   let expertise = answeredListLength - correctAnswerCounter;
   let suggestion = 0;
   if (expertise > 5) {
@@ -28,6 +28,11 @@ const DisplaySummaryContainer = (props) => {
       </Alert>
     );
   }
+  
+  const questionColumnHeader = quizType === "flag" ? "Flag" : "Question";
+  const answerColumnHeader = quizType === "flag" ? "Selected Country" : "Your Answer";
+  const correctColumnHeader = quizType === "flag" ? "Correct Country" : "Correct Answer";
+
   return (
     <div>
       <h3 className="text-right text-info">
@@ -40,9 +45,9 @@ const DisplaySummaryContainer = (props) => {
         <thead>
           <tr>
             <th>S.No</th>
-            <th>Question</th>
-            <th>Your Answer</th>
-            <th>Correct Answer</th>
+            <th>{questionColumnHeader}</th>
+            <th>{answerColumnHeader}</th>
+            <th>{correctColumnHeader}</th>
             <th>Result</th>
           </tr>
         </thead>
@@ -52,6 +57,7 @@ const DisplaySummaryContainer = (props) => {
               key={answeredObj.id}
               answeredObj={answeredObj}
               index={index}
+              quizType={quizType}
             />
           ))}
         </tbody>

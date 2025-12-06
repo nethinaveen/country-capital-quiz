@@ -64,6 +64,7 @@ const Quiz = () => {
         answeredListLength={answeredListLength}
         correctAnswerCounter={correctAnswerCounter}
         answeredList={answeredList}
+        quizType="capital"
       />
     );
   } else {
