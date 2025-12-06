@@ -10,21 +10,20 @@ const DisplaySummaryContainer = (props) => {
     suggestion = (
       <Alert variant="danger">
         <h4>
-          You got {expertise} wrongs... please revise and try again the same
-          level
+          You got {expertise} wrong... please revise and try again!
         </h4>
       </Alert>
     );
   } else if (expertise > 0) {
     suggestion = (
       <Alert variant="warning">
-        <h4>You are good in this level... little practice is needed :-)</h4>
+        <h4>You are good at this level... a little practice is needed :-)</h4>
       </Alert>
     );
   } else {
     suggestion = (
       <Alert variant="success">
-        <h4>You are excelled in this level...</h4>
+        <h4>You are excellent at this level...</h4>
       </Alert>
     );
   }
