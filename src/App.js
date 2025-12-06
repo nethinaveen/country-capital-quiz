@@ -16,8 +16,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Revision from "./components/Revision";
 import Contact from "./components/Contact";
 import Quiz from "./components/Quiz";
+import FlagQuiz from "./components/FlagQuiz";
 import logoImage from "./asset/logo1.png";
 import WelcomeToQuiz from "./components/WelcomeToQuiz";
+import WelcomeToFlagQuiz from "./components/WelcomeToFlagQuiz";
 
 const App = () => {
   return (
@@ -30,7 +32,7 @@ const App = () => {
             fluid
             roundedCircle
           />
-          {"      "} Country Capitals App
+          {"      "} World Quiz Pro
         </NavLink>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -40,7 +42,11 @@ const App = () => {
             </NavLink>
 
             <NavLink to="/welcometoquiz" className="nav-link">
-              Take Quiz
+              Capital Quiz
+            </NavLink>
+
+            <NavLink to="/welcometoflagquiz" className="nav-link">
+              Flag Quiz
             </NavLink>
           </Nav>
           <Nav activeKey={window.location.pathname}>
@@ -55,8 +61,10 @@ const App = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/revision" component={Revision} />
           <Route exact path="/quiz" component={Quiz} />
+          <Route exact path="/flagquiz" component={FlagQuiz} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/welcometoquiz" component={WelcomeToQuiz} />
+          <Route exact path="/welcometoflagquiz" component={WelcomeToFlagQuiz} />
           <Route component={NoPageFound} />
         </Switch>
       </Jumbotron>

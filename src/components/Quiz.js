@@ -77,7 +77,7 @@ const Quiz = () => {
       <Container className="p-3">
         <Jumbotron className="pb-1">
           <h3 className="text-right">
-            Result - {correctAnswerCounter}/{answeredListLength}
+            Result - {correctAnswerCounter}/{numberOfQuestions}
           </h3>
           <br />
           <QuestionAndOptions

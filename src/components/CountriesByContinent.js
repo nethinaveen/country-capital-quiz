@@ -11,6 +11,7 @@ const CountriesByContinent = (props) => {
           <th>S.No</th>
           <th>Country</th>
           <th>Capital City</th>
+          <th>Flag</th>
         </tr>
       </thead>
       <tbody>

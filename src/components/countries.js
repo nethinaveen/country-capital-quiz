@@ -20,7 +20,7 @@ export const countryList = [
   {
     id: 4,
     country: "Malaysia",
-    capital: "Kaula Lampur",
+    capital: "Kuala Lumpur",
     continent: "Asia",
   },
   {
@@ -68,13 +68,13 @@ export const countryList = [
   {
     id: 12,
     country: "Bhutan",
-    capital: "Thimpu",
+    capital: "Thimphu",
     continent: "Asia",
   },
   {
     id: 13,
     country: "Cambodia",
-    capital: "Phnom penh",
+    capital: "Phnom Penh",
     continent: "Asia",
   },
   {
@@ -97,7 +97,7 @@ export const countryList = [
   },
   {
     id: 17,
-    country: "Veitnam",
+    country: "Vietnam",
     capital: "Hanoi",
     continent: "Asia",
   },
@@ -111,7 +111,7 @@ export const countryList = [
   {
     id: 19,
     country: "Jordan",
-    capital: "Aman",
+    capital: "Amman",
     continent: "Asia",
   },
   {
@@ -123,13 +123,13 @@ export const countryList = [
   {
     id: 21,
     country: "North Korea",
-    capital: "Pyongyaug",
+    capital: "Pyongyang",
     continent: "Asia",
   },
   {
     id: 22,
     country: "South Korea",
-    capital: "Seol",
+    capital: "Seoul",
     continent: "Asia",
   },
   {
@@ -140,7 +140,7 @@ export const countryList = [
   },
   {
     id: 24,
-    country: "Kyrgyztan",
+    country: "Kyrgyzstan",
     capital: "Bishkek",
     continent: "Asia",
   },
@@ -153,7 +153,7 @@ export const countryList = [
   {
     id: 26,
     country: "Lebanon",
-    capital: "Beirutt",
+    capital: "Beirut",
     continent: "Asia",
   },
   {
@@ -170,8 +170,8 @@ export const countryList = [
   },
   {
     id: 29,
-    country: "Mangolia",
-    capital: "Ulaanbaator",
+    country: "Mongolia",
+    capital: "Ulaanbaatar",
     continent: "Asia",
   },
   {
@@ -183,13 +183,13 @@ export const countryList = [
   {
     id: 31,
     country: "Nepal",
-    capital: "Khatmandu",
+    capital: "Kathmandu",
     continent: "Asia",
   },
   {
     id: 32,
     country: "Oman",
-    capital: "Muskat",
+    capital: "Muscat",
     continent: "Asia",
   },
   {
@@ -200,7 +200,7 @@ export const countryList = [
   },
   {
     id: 34,
-    country: "Quatar",
+    country: "Qatar",
     capital: "Doha",
     continent: "Asia",
   },
@@ -212,7 +212,7 @@ export const countryList = [
   },
   {
     id: 36,
-    country: "Srilanka",
+    country: "Sri Lanka",
     capital: "Sri Jayawardenapura Kotte",
     continent: "Asia",
   },
@@ -254,7 +254,7 @@ export const countryList = [
   },
   {
     id: 43,
-    country: "United Arab Emirates (UAE)",
+    country: "United Arab Emirates",
     capital: "Abu Dhabi",
     continent: "Asia",
   },
@@ -273,7 +273,7 @@ export const countryList = [
   {
     id: 46,
     country: "Andorra",
-    capital: "Andorra la vella",
+    capital: "Andorra la Vella",
     continent: "Europe",
   },
   {
@@ -320,7 +320,7 @@ export const countryList = [
   },
   {
     id: 54,
-    country: "Czechia (Czech Republic)",
+    country: "Czech Republic",
     capital: "Prague",
     continent: "Europe",
   },
@@ -333,7 +333,7 @@ export const countryList = [
   {
     id: 56,
     country: "Estonia",
-    capital: "Tallin",
+    capital: "Tallinn",
     continent: "Europe",
   },
   {
@@ -404,7 +404,7 @@ export const countryList = [
   },
   {
     id: 68,
-    country: "Lithvania",
+    country: "Lithuania",
     capital: "Vilnius",
     continent: "Europe",
   },
@@ -417,7 +417,7 @@ export const countryList = [
   {
     id: 70,
     country: "Malta",
-    capital: "Chisinav",
+    capital: "Valletta",
     continent: "Europe",
   },
   {
@@ -501,7 +501,7 @@ export const countryList = [
   {
     id: 84,
     country: "Spain",
-    capital: "Madraid",
+    capital: "Madrid",
     continent: "Europe",
   },
   {
@@ -530,7 +530,7 @@ export const countryList = [
   },
   {
     id: 89,
-    country: "United Kingdom (UK)",
+    country: "United Kingdom",
     capital: "London",
     continent: "Europe",
   },
@@ -542,7 +542,7 @@ export const countryList = [
   },
   {
     id: 91,
-    country: "Australian Capital Territory",
+    country: "Australia",
     capital: "Canberra",
     continent: "Australia",
   },
@@ -590,8 +590,8 @@ export const countryList = [
   },
   {
     id: 99,
-    country: "United States of America",
-    capital: "Washigton D.C.",
+    country: "United States",
+    capital: "Washington D.C.",
     continent: "North America",
   },
   {
@@ -626,8 +626,8 @@ export const countryList = [
   },
   {
     id: 105,
-    country: "Trinidad & Tobago",
-    capital: "Port of Spair",
+    country: "Trinidad and Tobago",
+    capital: "Port of Spain",
     continent: "North America",
   },
   {
@@ -656,7 +656,7 @@ export const countryList = [
   },
   {
     id: 110,
-    country: "Antigua & Barbuda",
+    country: "Antigua and Barbuda",
     capital: "St. John's",
     continent: "North America",
   },
@@ -686,7 +686,7 @@ export const countryList = [
   },
   {
     id: 115,
-    country: "Peurto Rico",
+    country: "Puerto Rico",
     capital: "San Juan",
     continent: "North America",
   },
@@ -699,7 +699,7 @@ export const countryList = [
   {
     id: 117,
     country: "Bahamas",
-    capital: "Nassan",
+    capital: "Nassau",
     continent: "North America",
   },
   {
@@ -728,7 +728,7 @@ export const countryList = [
   },
   {
     id: 122,
-    country: "Saint Kitts & Nevis",
+    country: "Saint Kitts and Nevis",
     capital: "Basseterre",
     continent: "North America",
   },
@@ -741,7 +741,7 @@ export const countryList = [
   {
     id: 124,
     country: "Argentina",
-    capital: "Buenas Aires",
+    capital: "Buenos Aires",
     continent: "South America",
   },
   {
@@ -764,7 +764,7 @@ export const countryList = [
   },
   {
     id: 128,
-    country: "Columbia",
+    country: "Colombia",
     capital: "Bogota",
     continent: "South America",
   },
@@ -806,7 +806,7 @@ export const countryList = [
   },
   {
     id: 135,
-    country: "Venezula",
+    country: "Venezuela",
     capital: "Caracas",
     continent: "South America",
   },
@@ -830,7 +830,7 @@ export const countryList = [
   },
   {
     id: 139,
-    country: "Bokswana",
+    country: "Botswana",
     capital: "Gaborone",
     continent: "Africa",
   },
@@ -854,13 +854,13 @@ export const countryList = [
   },
   {
     id: 143,
-    country: "The Republic of Cabo Verde",
+    country: "Cape Verde",
     capital: "Praia",
     continent: "Africa",
   },
   {
     id: 144,
-    country: "The Central African Republic",
+    country: "Central African Republic",
     capital: "Bangui",
     continent: "Africa",
   },
@@ -878,19 +878,19 @@ export const countryList = [
   },
   {
     id: 147,
-    country: "Democratic Republic of Congo",
+    country: "Congo Democratic Republic",
     capital: "Kinshasa",
     continent: "Africa",
   },
   {
     id: 148,
-    country: "Republic of Congo",
+    country: "Congo Republic",
     capital: "Brazzaville",
     continent: "Africa",
   },
   {
     id: 149,
-    country: "Cote d'Ivoire ",
+    country: "Cote d Ivoire",
     capital: "Yamoussoukro",
     continent: "Africa",
   },
@@ -945,12 +945,12 @@ export const countryList = [
   {
     id: 158,
     country: "Guinea",
-    capital: "Conokry",
+    capital: "Conakry",
     continent: "Africa",
   },
   {
     id: 159,
-    country: "Guinea-Bissau",
+    country: "Guinea Bissau",
     capital: "Bissau",
     continent: "Africa",
   },
@@ -980,14 +980,14 @@ export const countryList = [
   },
   {
     id: 164,
-    country: "Madagacar",
+    country: "Madagascar",
     capital: "Antananarivo",
     continent: "Africa",
   },
   {
     id: 165,
     country: "Malawi",
-    capital: "Lilonge",
+    capital: "Lilongwe",
     continent: "Africa",
   },
   {
@@ -998,7 +998,7 @@ export const countryList = [
   },
   {
     id: 167,
-    country: "Mausitania",
+    country: "Mauritania",
     capital: "Nouakchott",
     continent: "Africa",
   },
@@ -1094,8 +1094,8 @@ export const countryList = [
   },
   {
     id: 183,
-    country: "Swaziland",
-    capital: "Lobamba  Mbabane",
+    country: "Eswatini",
+    capital: "Lobamba and Mbabane",
     continent: "Africa",
   },
   {
@@ -1107,7 +1107,7 @@ export const countryList = [
   {
     id: 185,
     country: "Togo",
-    capital: "Lome'",
+    capital: "Lomé",
     continent: "Africa",
   },
   {
