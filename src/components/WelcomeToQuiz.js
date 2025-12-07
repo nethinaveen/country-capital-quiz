@@ -48,7 +48,7 @@ const WelcomeToQuiz = () => {
               checked={selectedAnswer === "5"}
               onChange={(e) => setSelectedAnswer(e.target.value)}
             />{" "}
-            5 Questions (Trail)
+            5 Questions (Trial)
           </label>
         </li>
         <li>
